@@ -2,7 +2,7 @@
 
 A demo of a Accounting Notebook
 
-Time elapsed: 3hours 15min
+Time elapsed: 3hours 15min (I had not much time)
 
 Link to the API: [AccountingAPI](https://github.com/PabloMaly/AccountingAPI)
 
