@@ -12,4 +12,4 @@ ng serve
 
 ## Demo
 
-![alt text](https://github.com/PabloMaly/AccountingBook/blob/master/Annotation%202019-11-21%20163755.png)
+![alt text](https://github.com/PabloMaly/AccountingBook/blob/master/Annotation%202019-11-21%20162109.png)
