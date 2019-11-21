@@ -2,6 +2,10 @@
 
 A demo of a Accounting Notebook
 
+Time elapsed: 3hours 15min
+
+Link to the API: [AccountingAPI](https://github.com/PabloMaly/AccountingAPI)
+
 ## Install
 
 npm install
