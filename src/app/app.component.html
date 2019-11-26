@@ -7,29 +7,16 @@
 
 <div class="container">
         <ngb-accordion #acc="ngbAccordion" activeIds="" closeOthers="true">
-          <ngb-panel *ngFor='let user of users'>
+          <ngb-panel *ngFor='let transactions of transaction'>
             <ng-template ngbPanelTitle>
-              <span>User: {{ user.firstname }} {{ user.lastname }}</span>
+              <span class="panel-header-{{transactions.type}}">Transaction ID: {{ transactions.id }} </span>
             </ng-template>
-            <ng-template ngbPanelContent>
-                    <span>Current Balance : {{ user.balance}}</span> <br />
-                    <span>Email: {{ user.email}}</span>           
-                    <ngb-accordion closeOthers="true">
-                      <ngb-panel id="panel-header-{{tx.type}}{{tx.id}}" *ngFor='let tx of user.transactions'>
-                        <ng-template ngbPanelTitle *ngFor='let user of users' >
-                          <div>
-                            <span>Transaction Date: {{ tx.date }}</span>
-                          </div>
-                        </ng-template>
-                        <ng-template ngbPanelContent>
+               <ng-template ngbPanelContent>
                           <ul class="list-group">
-                            <li class="list-group-item"><span>Transaction Id: {{ tx.id }}</span></li>
-                            <li class="list-group-item"><span>Transaction Ammount: {{ tx.ammount }}</span></li>
-                            <li class="list-group-item"><span>Transaction Type: {{ tx.type === 'D' ? 'Debit' : 'Credit' }}</span></li>
+                            <li class="list-group-item"><span>Transaction Id: {{ transactions.id }}</span></li>
+                            <li class="list-group-item"><span>Transaction Amount: {{ transactions.amount }}</span></li>
+                            <li class="list-group-item"><span>Transaction Type: {{ transactions.type }}</span></li>
                           </ul>        
-                        </ng-template>
-                      </ngb-panel>
-                    </ngb-accordion>
             </ng-template>
           </ngb-panel>
         </ngb-accordion>  

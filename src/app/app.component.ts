@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
-import { User } from './model/user';
+import { Transaction } from './model/transaction';
 import { log } from 'util';
 
 @Component({
@@ -10,7 +10,7 @@ import { log } from 'util';
 })
 export class AppComponent implements OnInit {
   title = 'AgileEngine Notebook demo';
-  users: User[] = [];
+  transaction: Transaction[] = [];
 
   constructor(
     protected txService: UserService
@@ -18,10 +18,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.txService.getUser()
+    this.txService.getUsers()
     .subscribe(
       data => { // Success
-        this.users = data as User[];
+      console.log(data);
+        this.transaction = data as Transaction[];
       },
       (error) => {
         console.error(error);
